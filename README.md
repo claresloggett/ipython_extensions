@@ -3,8 +3,8 @@
 You can install each extension individually, or you can link the extension directories
 into your IPython directories (what I do):
 
-    ln -s $(pwd)/extensions $(ipython locate profile)/extensions
-    ln -s $(pwd)/nbextensions $(ipython locate profile)/nbextensions
+    ln -s $(pwd)/extensions $(ipython locate profile)/static/extensions
+    ln -s $(pwd)/nbextensions $(ipython locate profile)/static/nbextensions
 
 If you want to install into a profile other than default, you can replace 
 `$(ipython locate profile)` with e.g. `$(ipython locate profile nbserver)` here and below.
@@ -13,7 +13,7 @@ If you want to install into a profile other than default, you can replace
 
 Add a gist button to the notebook toolbar:
 
-    $ curl https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/gist.js > $(ipython locate profile)/nbextensions/gist.js
+    $ curl https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/gist.js > $(ipython locate profile)/static/nbextensions/gist.js
 
 and load it by adding to your custom.js, found in `$(ipython locate profile)/static/custom/custom.js`:
 
@@ -41,8 +41,8 @@ Adds a button to the toolbar to toggle the floating table of contents.
 
 install the extension:
 
-    $ curl https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/toc.js > $(ipython locate profile)/nbextensions/toc.js
-    $ curl https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/toc.css > $(ipython locate profile)/nbextensions/toc.css
+    $ curl https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/toc.js > $(ipython locate profile)/static/nbextensions/toc.js
+    $ curl https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/toc.css > $(ipython locate profile)/static/nbextensions/toc.css
 
 and load it with this in your custom.js:
 
